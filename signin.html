@@ -297,7 +297,7 @@
 
     }
 
-    .login_form_in>.submitBtn {
+    .submitBtn {
         background-color: red;
         border: none;
         color: #fff;
@@ -372,7 +372,7 @@
         </nav>
     </div>
     <div class="login_form_out">
-        <form class="login_form_in" method="post">
+        <form class="login_form_in" method="post" action="/login">
             <h3 class="heading">Signin</h3>
             <label>Name</label>
             <input type="text" name="userName" placeholder="Enter name"><br>
@@ -382,7 +382,7 @@
             <input type="password" name="password" placeholder="Enter password"><br>
             <label>Repeat Password</label>
             <input type="password" name="repeatPassword" placeholder="Enter repeat password"><br>
-            <a href="login"><button class="submitBtn">Submit</button></a><br>
+            <button class="submitBtn">Submit</button><br>
             <p class="loginText">If you are already a user go to login in</p>
             <a href="login" class="loginLink">Login</a>
         </form>
