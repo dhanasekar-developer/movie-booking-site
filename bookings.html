@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+
+    }
+
+    .backgroundimg>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo {
+        font-family: 'Lemon', cursive;
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .logo:hover {
+        color: aliceblue;
+    }
+
+    .tolal_navbar {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #000;
+        border-bottom: 1px solid rgb(220, 3, 3);
+        padding: 0 20px;
+        box-shadow: 2px 2px 2px rgb(110, 3, 3);
+    }
+
+    .nav_list>a,
+    button {
+        list-style: none;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+        font-family: 'Righteous', cursive;
+        transition: .5s;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+
+    .nav_list>a {
+        margin-top: 0px;
+        align-items: center;
+
+    }
+
+    .nav_list>a:hover {
+        color: red;
+    }
+
+    .loginbtn {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .loginbtn:hover {
+        color: red;
+        border: 2px solid red;
+    }
+
+    .navbtn {
+        font-size: 2rem;
+        padding: 7px;
+    }
+
+    .heading {
+        font-family: 'Alkatra', cursive;
+        margin: 30px;
+        color: rgb(254, 17, 17);
+        font-size: 2rem !important;
+
+    }
+
+    sup {
+        background-color: #fff;
+        color: #000;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 3px;
+
+    }
+
+    .book_list {
+        display: flex;
+    }
+
+    .all_cart {
+        display: flex;
+    }
+
+    .total_modal {
+        background-color: #333;
+    }
+
+    .home_btn {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 15px;
+        margin: 10px;
+    }
+
+    .bi-x-lg {
+        color: red;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .align_booking_cart {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart_items {
+        border: 2px solid red;
+        border-radius: 5px;
+        width: 500px;
+        padding: 10px;
+        display: flex;
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .sheetsTotal {
+        display: flex;
+    }
+
+    .eachTotal {
+        padding-left: 20px;
+        padding-top: 8px;
+    }
+
+    @media all and (max-width: 520px) {
+        .cart_items {
+            width: 400px;
+        }
+
+        .sheetsTotal {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .eachTotal {
+            padding-left: 10px;
+        }
+    }
+
+    @media all and (max-width: 420px) {
+        .cart_items {
+            width: 350px;
+        }
+    }
+
+    .cart_items>.image {
+        display: flex;
+        align-items: center;
+    }
+
+    .cart_details {
+        display: flex;
+
+    }
+
+    .price_title_icon {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .price_title_icon>div {
+        display: flex;
+    }
+
+    .price_title_icon>div>h6,
+    button {
+        margin: 0 10px;
+        font-size: 1.1rem;
+    }
+
+    .cart_item_price {
+        background-color: #fff;
+        color: #000;
+        border-radius: 5px;
+        display: inline;
+        align-items: center;
+        font-size: 1rem;
+        border: none;
+    }
+
+    .cart_sheets {
+        display: flex;
+        padding-left: 10px;
+        padding-top: 8px;
+
+    }
+
+    .cart_sheets>div {
+        display: flex;
+    }
+
+    .cart_sheets {
+        gap: 10px;
+
+    }
+
+    .checkoutBooking {
+        background-color: green;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .clearBookingList {
+        background-color: red;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+</style>
+
+<body>
+    <div class="tolal_navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand logo">Movies Book</a>
+                <button class="navbar-toggler nav_expand_btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbtn">&#8801</span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav_list ml-2">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item nav_list">
+                        <a type="button" class="nav-link booking_btn" href="bookings">Bookings<sup
+                                id="count">0</sup></a>
+                    </li>
+                    <li class="nav-item nav_list">
+                        <a class="nav-link active" aria-current="page" href="offers">Offers</a>
+                    </li>
+                    <li class="nav-item nav_list"><a class="nav-link active" aria-current="page" href="login"><button
+                                class="loginbtn">Login</button></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <h3 class="heading">Your Bookings</h3>
+    <div id="lable" class="text-center"></div>
+    <div class="align_booking_cart">
+        <div id="booking_cart"></div>
+    </div>
+    <script>
+        const moviesData = [
+            {
+                id: 1,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyEn1QTy9WCi0bDzc1o2UsD1YBoGBSt2LiiA&usqp=CAU",
+                title: "Jailer",
+                rating: 7.9,
+                price: 150,
+            },
+            {
+                id: 2,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnq0xDqvA-WWRgdPjtqjWy0LzLkaMXFZCuRg&usqp=CAU",
+                title: "Blue beetle",
+                rating: 7.1,
+                price: 170,
+            },
+            {
+                id: 3,
+                image: "https://www.thetelugufilmnagar.com/wp-content/uploads/2023/03/LEO.webp",
+                title: "Leo",
+                rating: 7.1,
+                price: 150,
+            },
+            {
+                id: 4,
+                image: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1bjHb5.img?w=1200&h=900&m=4&q=65",
+                title: "Por Thozhil",
+                rating: 8.1,
+                price: 120,
+            },
+            {
+                id: 5,
+                image: "https://images.ottplay.com/images/a-poster-of-mark-antony-180.jpg",
+                title: "Mark Antony",
+                rating: 7.4,
+                price: 150,
+            },
+            {
+                id: 6,
+                image: "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/b4a1ba87123937.5daeb6af5f27c.jpg",
+                title: "Kaith",
+                rating: 8.4,
+                price: 170,
+            },
+            {
+                id: 7,
+                image: "https://www.shmoti.com/ImageFiles/Image_555x271/20220219_Banner_ValimaiSS20220219.jpg",
+                title: "valimai",
+                rating: 7.8,
+                price: 170,
+            },
+            {
+                id: 8,
+                image: "https://feeds.abplive.com/onecms/images/uploaded-images/2022/05/13/b2c3df240546d6612af041c521bd271f_original.JPG?impolicy=abp_cdn&imwidth=720",
+                title: "Don",
+                rating: 7.8,
+                price: 140,
+            },
+            {
+                id: 9,
+                image: "https://indiaglitz-media.s3.amazonaws.com/tamil/home/aneethi210723_1.jpg",
+                title: "Aneethi",
+                rating: 6.7,
+                price: 120,
+            },
+            {
+                id: 10,
+                image: "https://i0.wp.com/www.newsbugz.com/wp-content/uploads/2022/02/Agilan-Tamil-Movie.jpg?fit=1280%2C720&ssl=1",
+                title: "Agilan",
+                rating: 6.3,
+                price: 100,
+            },
+            {
+                id: 11,
+                image: "https://sund-images.sunnxt.com/154434/960x540_DSP_154434_7998081c-2459-4a12-bf4e-bb105bafdd5a.jpg",
+                title: "DSP",
+                rating: 6.1,
+                price: 100,
+            },
+            {
+                id: 12,
+                image: "https://i.ytimg.com/vi/vB1OmNrnoIc/maxresdefault.jpg",
+                title: "Theera Kaadhal",
+                rating: 6.8,
+                price: 120,
+            },
+
+        ];
+    </script>
+    <script>
+        let lable = document.getElementById('lable');
+        let booking_cart = document.getElementById('booking_cart');
+
+        let bookList = JSON.parse(localStorage.getItem('data')) || [];
+
+        let calculation = () => {
+            let count = document.getElementById('count');
+            count.innerHTML = bookList.map((e) => e.item).reduce((x, y) => x + y, 0);
+        }
+        calculation();
+
+
+        let booking_list = () => {
+            if (bookList.length !== 0) {
+                return (booking_cart.innerHTML = bookList.map((e) => {
+
+                    let { id, qtn } = e;
+                    let search = moviesData.find((f) => f.id === id) || [];
+                    let { image, price, title } = search;
+                    return `
+            <div class='cart_items' key={id}>
+                <div class='image'>
+                    <img src='${image}' width="100px" height='70px'></img>
+                </div>
+                <div>
+                    <div class='cart_details'>
+                        <div class='price_title_icon'>
+                            <div>
+                                <h6>${title}</h6>
+                                <button class='cart_item_price'>₹${price}</button>
+                            </div>
+                            <i class="bi bi-x-lg" onclick="removeItem(${id})"></i>
+                        </div>
+                    </div>
+                    <div class='sheetsTotal'>
+                        <div class='cart_sheets'>
+                            <h6>No.Sheets : </h6>
+                            <div>
+                                <i class="bi bi-dash-lg" onclick='decrement(${id})'></i>
+                                <h6>${qtn}</h6>
+                                <i class="bi bi-plus-lg" onclick="increment(${id})"></i>
+                            </div>
+                        </div>
+                        <div class='eachTotal'>
+                            <h6 id='total'>Total : ₹ ${qtn * price}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+                }).join(''));
+            }
+            else if (bookList.length === 0) {
+                booking_cart = ``
+                lable.innerHTML = `
+        <h1>Your cart is empty</h1>
+        <a href='/'><button class='home_btn'>Back to home</button></a>`
+
+            }
+        }
+        booking_list();
+
+        let increment = (id) => {
+            let selectedItem = id;
+            let search = bookList.find((e) => e.id === selectedItem);
+
+            if (search === undefined) {
+                bookList.push({
+                    id: selectedItem,
+                    qtn: 1,
+                });
+            } else {
+                search.qtn += 1;
+            }
+
+            booking_list();
+            TotalAmount();
+            localStorage.setItem("data", JSON.stringify(bookList));
+        }
+
+        let decrement = (id) => {
+            let selectedItem = id;
+            search = bookList.find((e) => e.id === selectedItem)
+            if (search === undefined) return;
+            else if (search.qtn === 1) return;
+            else {
+                search.qtn -= 1
+            }
+            booking_list();
+            TotalAmount();
+            localStorage.setItem("data", JSON.stringify(bookList));
+        }
+
+        let removeItem = (id) => {
+            let selectedId = id;
+            let cnt = 0;
+            console.log(selectedId);
+            bookList = bookList.filter((e) => e.id !== selectedId);
+            booking_list();
+            TotalAmount();
+            calculation();
+            localStorage.setItem('data', JSON.stringify(bookList));
+            if (bookList.length == 0 && cnt == 0) {
+                cnt += 1;
+                location.reload()
+            }
+
+        }
+
+        let removeAll = () => {
+            let cnt = 0;
+            bookList = [];
+            booking_list();
+            calculation();
+            localStorage.setItem('data', JSON.stringify(bookList));
+            if (bookList.length == 0 && cnt == 0) {
+                cnt += 1;
+                location.reload()
+            }
+
+        }
+        let TotalAmount = () => {
+            if (bookList.length !== 0) {
+                let amount = bookList.map((e) => {
+                    let { id, item, qtn } = e;
+                    let search = moviesData.find((f) => f.id === id) || [];
+                    return qtn * search.price;
+                }).reduce((x, y) => x + y, 0);
+                console.log(amount);
+                lable.innerHTML = `
+        <h2>Total Amount ₹ ${amount}</h2>
+        <button class='home_btn clearBookingList' onclick='removeAll()'>Clear Booking List</button>
+        <button class='home_btn checkoutBooking'>Checkout Booking</button>
+        `
+            }
+        }
+        TotalAmount();
+    </script>
+</body>
+
+</html>
