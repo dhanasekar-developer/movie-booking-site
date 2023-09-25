@@ -285,6 +285,42 @@
         height: 100%;
         width: 100%;
     }
+
+    footer {
+        background-color: #1f1f1f;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .footerHeading {
+        font-weight: bold;
+        color: tomato;
+    }
+
+    footer>ul {
+        width: 230px;
+    }
+
+    footer>ul>li {
+        list-style: none;
+        line-height: 30px;
+    }
+
+    .myDetails {
+        background-color: #000;
+        padding: 15px 25px;
+        width: 315px !important;
+        height: 120px !important;
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .holeBody {
+        min-height: 90vh;
+    }
 </style>
 
 <body>
@@ -322,23 +358,66 @@
             </div>
         </nav>
     </div>
-    <h1 class="heading"> Your Offers</h1>
-    <div class="offer_images">
-        <div class="offer_img">
-            <img src="https://in.bmscdn.com/offers/offerlisting/hdfc-bank-timescard-offer-htc0314.jpg?27072023091528">
+
+    <section class="holeBody">
+        <h1 class="heading"> Your Offers</h1>
+        <div class="offer_images">
+            <div class="offer_img">
+                <img src="https://offercdn.paytm.com/blog/2021/10/hdfcmovies-app.png">
+            </div>
+            <div class="offer_img">
+                <img
+                    src="https://dealbates.com/timthumb.php?src=https://dealbates.com/uploads/1564504917766.jpg&w=600&h=430&zc=2">
+            </div>
+            <div class="offer_img">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gqI959aAbHLzSDK07k2jPGnxNwQH53mLHg&usqp=CAU">
+            </div>
+            <div class="offer_img">
+                <img
+                    src="https://in.bmscdn.com/offers/offerlisting/hdfc-bank-timescard-offer-htc0314.jpg?27072023091528">
+            </div>
         </div>
-        <div class="offer_img">
-            <img src="https://offercdn.paytm.com/blog/2021/10/hdfcmovies-app.png">
-        </div>
-        <div class="offer_img">
-            <img
-                src="https://dealbates.com/timthumb.php?src=https://dealbates.com/uploads/1564504917766.jpg&w=600&h=430&zc=2">
-        </div>
-        <div class="offer_img">
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gqI959aAbHLzSDK07k2jPGnxNwQH53mLHg&usqp=CAU">
-        </div>
-    </div>
+    </section>
+    <footer>
+        <ul>
+            <li class="footerHeading">MOVIES BY GENRE</li>
+            <li>Action</li>
+            <li>Adventure</li>
+            <li>Thriller</li>
+            <li>Comedy</li>
+            <li>Sci-Fi</li>
+            <li>Horror</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIES BY LANGUAGE</li>
+            <li>Tamil</li>
+            <li>Telugu</li>
+            <li>Malayalam</li>
+            <li>Hindi</li>
+            <li>English</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIE REVIEWS</li>
+            <li>2023 Reviews</li>
+            <li>2022 Reviews</li>
+            <li>2021 Reviews</li>
+            <li>2020 Reviews</li>
+            <li>2019 Reviews</li>
+            <li>2018 Reviews</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIE UPDATES</li>
+            <li>Upcoming Movies</li>
+            <li>Movies Now Showing</li>
+            <li>Movie Celebrities</li>
+        </ul>
+        <ul class='myDetails'>
+            <li class='footerHeading'>Developed by</li>
+            <li>Dhanaseakr.s</li>
+            <li>dhanasekarsdeveloper@gmail.com</li>
+        </ul>
+    </footer>
     <script>
         let bookList = JSON.parse(localStorage.getItem('data')) || [];
 

@@ -277,6 +277,42 @@
         color: #fff;
         font-size: 1.2rem;
     }
+
+    footer {
+        background-color: #1f1f1f;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .footerHeading {
+        font-weight: bold;
+        color: tomato;
+    }
+
+    footer>ul {
+        width: 230px;
+    }
+
+    footer>ul>li {
+        list-style: none;
+        line-height: 30px;
+    }
+
+    .myDetails {
+        background-color: #000;
+        padding: 15px 25px;
+        width: 315px !important;
+        height: 120px !important;
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .holeBody {
+        min-height: 90vh;
+    }
 </style>
 
 <body>
@@ -311,11 +347,52 @@
         </nav>
     </div>
 
-    <h3 class="heading">Your Bookings</h3>
-    <div id="lable" class="text-center"></div>
-    <div class="align_booking_cart">
-        <div id="booking_cart"></div>
-    </div>
+    <section class="holeBody">
+        <h3 class="heading">Your Bookings</h3>
+        <div id="lable" class="text-center"></div>
+        <div class="align_booking_cart">
+            <div id="booking_cart"></div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li class="footerHeading">MOVIES BY GENRE</li>
+            <li>Action</li>
+            <li>Adventure</li>
+            <li>Thriller</li>
+            <li>Comedy</li>
+            <li>Sci-Fi</li>
+            <li>Horror</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIES BY LANGUAGE</li>
+            <li>Tamil</li>
+            <li>Telugu</li>
+            <li>Malayalam</li>
+            <li>Hindi</li>
+            <li>English</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIE REVIEWS</li>
+            <li>2023 Reviews</li>
+            <li>2022 Reviews</li>
+            <li>2021 Reviews</li>
+            <li>2020 Reviews</li>
+            <li>2019 Reviews</li>
+            <li>2018 Reviews</li>
+        </ul>
+        <ul>
+            <li class="footerHeading">MOVIE UPDATES</li>
+            <li>Upcoming Movies</li>
+            <li>Movies Now Showing</li>
+            <li>Movie Celebrities</li>
+        </ul>
+        <ul class='myDetails'>
+            <li class='footerHeading'>Developed by</li>
+            <li>Dhanaseakr.s</li>
+            <li>dhanasekarsdeveloper@gmail.com</li>
+        </ul>
+    </footer>
     <script>
         const moviesData = [
             {
@@ -514,18 +591,6 @@
 
         }
 
-        let removeAll = () => {
-            let cnt = 0;
-            bookList = [];
-            booking_list();
-            calculation();
-            localStorage.setItem('data', JSON.stringify(bookList));
-            if (bookList.length == 0 && cnt == 0) {
-                cnt += 1;
-                location.reload()
-            }
-
-        }
         let TotalAmount = () => {
             if (bookList.length !== 0) {
                 let amount = bookList.map((e) => {
@@ -536,12 +601,24 @@
                 console.log(amount);
                 lable.innerHTML = `
         <h2>Total Amount ₹ ${amount}</h2>
-        <button class='home_btn clearBookingList' onclick='removeAll()'>Clear Booking List</button>
-        <button class='home_btn checkoutBooking'>Checkout Booking</button>
+        <button class='home_btn checkoutBooking' onclick='bookNow()'>Book Now</button>
         `
             }
         }
         TotalAmount();
+        let bookNow = () => {
+            let date = prompt('Enter Date : ').trim();
+            let time = prompt('Enter Time : ').trim();
+            if (date === isNaN || time === isNaN) {
+                alert('Please enter proper date and time')
+            }
+            else if (date === '' || time === '') {
+                alert('Please enter proper date and time')
+            }
+            else {
+                alert('Your ticket has been booked')
+            }
+        }
     </script>
 </body>
 
